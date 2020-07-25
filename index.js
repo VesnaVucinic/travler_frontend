@@ -1,1 +1,3 @@
-console.log("in index.js file");
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("loaded");
+});
