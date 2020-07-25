@@ -7,6 +7,54 @@
     <script type="text/javascript" src="index.js"></script>
   </head>
   <body>
+    <div class="form-container">
+      <form id="create-location-form">
+        <h3>Create a Location!</h3>
+
+        <input
+          id="input-name"
+          type="text"
+          name="name"
+          value=""
+          placeholder="Enter your location name..."
+          class="input-text"
+        />
+        <br /><br />
+        <textarea
+          id="input-description"
+          name="description"
+          rows="6"
+          cols="50"
+          value=""
+          placeholder="Enter your location description..."
+        ></textarea>
+        <br /><br />
+        <input
+          id="input-url"
+          type="text"
+          name="image"
+          value=""
+          placeholder="Location image URL..."
+          class="input-text"
+        />
+        <br /><br />
+
+        <select id="destinations" name="destinations">
+          <option value="1">Maldives</option>
+          <option value="2">Tahiti</option>
+          <option value="3">Fiji</option>
+        </select>
+        <br /><br />
+
+        <input
+          id="create-button"
+          type="submit"
+          name="submit"
+          value="Create New Location"
+          class="submit"
+        />
+      </form>
+    </div>
     <div id="location-container"></div>
   </body>
 </html>
