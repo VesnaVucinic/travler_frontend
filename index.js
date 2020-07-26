@@ -1,6 +1,7 @@
 const baseURL = "http://localhost:3000/api/v1/locations";
 
 document.addEventListener("DOMContentLoaded", () => {
+  // gets all the loactions once the domcontent is loaded.
   getLocations();
 
   const createLocationForm = document.querySelector("#create-location-form");
