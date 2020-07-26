@@ -34,5 +34,10 @@ function getLocations() {
 
 function createFormHandler(e) {
   e.preventDefault();
-  console.log(e);
+  const locationNameInput = document.querySelector("#input-name").value;
+  const locationDescriptionInput = document.querySelector("#input-description")
+    .value;
+  const locationImageInput = document.querySelector("#input-url").value;
+  const locationDestinationInput = document.querySelector("#destinations")
+    .value;
 }
