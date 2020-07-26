@@ -14,7 +14,13 @@ function getLocations() {
     .then((response) => response.json())
     .then((locations) => {
       locations.data.forEach((location) => {
-        const locationMarkup = `
+        render(location);
+      });
+    });
+}
+
+function render(location) {
+  const locationMarkup = `
             <div data-id="${location.id}">
                 <h2>${location.attributes.name}</h2>
                 <h4>${location.attributes.destination.name}</h4>
@@ -26,11 +32,7 @@ function getLocations() {
             <br>
             <br>
           `;
-        document.querySelector(
-          "#location-container"
-        ).innerHTML += locationMarkup;
-      });
-    });
+  document.querySelector("#location-container").innerHTML += locationMarkup;
 }
 
 function createFormHandler(e) {
@@ -62,18 +64,6 @@ function postFetch(name, description, image_url, destination_id) {
     .then((location) => {
       // console.log(location);
       const locationData = location.data;
-      const locationMarkup = `
-            <div data-id="${locationData.id}">
-                <h2>${locationData.attributes.name}</h2>
-                <h4>${locationData.attributes.destination.name}</h4>
-                <p>${locationData.attributes.description}</p>
-                <img src="${locationData.attributes.image_url}" height="400" width="500">
-                <br>
-                <button data-id="${locationData.id}">Edit</button>
-            </div>
-            <br>
-            <br>
-          `;
-      document.querySelector("#location-container").innerHTML += locationMarkup;
+      render(locationData);
     });
 }
