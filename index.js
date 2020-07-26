@@ -2,6 +2,10 @@ const baseURL = "http://localhost:3000/api/v1/locations";
 
 document.addEventListener("DOMContentLoaded", () => {
   getLocations();
+
+  const createLocationForm = document.querySelector("#create-location-form");
+
+  createLocationForm.addEventListener("submit", (e) => createFormHandler(e));
 });
 
 function getLocations() {
@@ -26,4 +30,9 @@ function getLocations() {
         ).innerHTML += locationMarkup;
       });
     });
+}
+
+function createFormHandler(e) {
+  e.preventDefault();
+  console.log(e);
 }
