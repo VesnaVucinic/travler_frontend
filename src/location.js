@@ -16,7 +16,6 @@ class Location {
                   <p>${this.description}</p>
                   <img src="${this.image_url}" height="400" width="500">
                   <br>
-                  <button data-id="${this.id}">Edit</button>
               </div>
               <br>
               <br>
@@ -25,3 +24,5 @@ class Location {
 }
 
 Location.all = [];
+
+// edit button option for renderLocationCard -> <button data-id="${this.id}">Edit</button>
