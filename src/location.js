@@ -10,9 +10,9 @@ class Location {
 
   renderLocationCard() {
     return `
-              <div data-id="${this.id}">
+              <div data-id="${this.id}" class="card">
                   <h2>${this.name}</h2>
-                  <h4>${this.destination.name}</h4>
+                  <em><h5>${this.destination.name}</h5></em>
                   <p>${this.description}</p>
                   <img src="${this.image_url}" height="400" width="500">
                   <br>

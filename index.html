@@ -4,11 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travler</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <script type="text/javascript" src="src/location.js"></script>
     <script type="text/javascript" src="src/index.js"></script>
   </head>
-  <body>
-    <div class="form-container">
+  <body class="container-fluid center">
+    <h1 class="center main-title">Travler</h1>
+    <div class="form-container center">
       <form id="create-location-form">
         <h3>Create a Location!</h3>
 
@@ -18,7 +26,7 @@
           type="text"
           name="name"
           value=""
-          placeholder="Enter your location name..."
+          placeholder="Enter location name..."
           class="input-text"
         />
         <br /><br />
@@ -30,7 +38,7 @@
           rows="6"
           cols="50"
           value=""
-          placeholder="Enter your location description..."
+          placeholder="Enter location description..."
         ></textarea>
         <br /><br />
 
@@ -61,12 +69,13 @@
           type="submit"
           name="submit"
           value="Create New Location"
-          class="submit"
+          class="submit btn btn-success"
         />
       </form>
       <br />
       <br />
     </div>
     <div id="location-container"></div>
+    <footer>&copy; 2020 Travler</footer>
   </body>
 </html>
