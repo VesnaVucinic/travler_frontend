@@ -56,9 +56,6 @@ function postFetch(name, description, image_url, destination_id) {
       document.querySelector(
         "#location-container"
       ).innerHTML += newLocation.renderLocationCard();
-      // document.querySelector("#input-name").value = "";
-      // document.querySelector("#input-description").value = "";
-      // document.querySelector("#input-url").value = "";
       document.querySelector("#create-location-form").reset();
     });
 }
