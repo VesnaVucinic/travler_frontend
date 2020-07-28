@@ -37,15 +37,15 @@ h1 {
 }
 
 input[type="text"] {
-  background-color: rgb(228, 228, 228) !important;
+  background-color: #f7f7f7 !important;
 }
 
 textarea {
-  background-color: rgb(228, 228, 228) !important;
+  background-color: #f7f7f7 !important;
 }
 
 select {
-  background-color: rgb(228, 228, 228) !important;
+  background-color: #f7f7f7 !important;
 }
 
 footer {
