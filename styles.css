@@ -1,0 +1,65 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #aacff1;
+}
+
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+/* div {
+  margin: auto;
+  padding: 10px;
+  border: 2px solid #e3f8ff;
+  text-align: center;
+} */
+
+.card {
+  display: table;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #e3f8ff;
+  background-color: #e1f0ff;
+}
+
+h1 {
+  text-align: center;
+}
+
+.main-title {
+  font-size: 60px;
+}
+
+input[type="text"] {
+  background-color: rgb(228, 228, 228) !important;
+}
+
+textarea {
+  background-color: rgb(228, 228, 228) !important;
+}
+
+select {
+  background-color: rgb(228, 228, 228) !important;
+}
+
+footer {
+  display: table;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form {
+  display: table;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #e3f8ff;
+  border-radius: 25px;
+}
