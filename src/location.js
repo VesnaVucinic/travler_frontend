@@ -12,7 +12,7 @@ class Location {
     return `
               <div data-id="${this.id}" class="card">
                   <h2>${this.name}</h2>
-                  <em><h5>${this.destination.name}</h5></em>
+                  <em><p>Destination Type: ${this.destination.name}</p></em>
                   <p>${this.description}</p>
                   <img src="${this.image_url}" height="400" width="500">
                   <br>
