@@ -7,7 +7,40 @@ document.addEventListener("DOMContentLoaded", () => {
   const createLocationForm = document.querySelector("#create-location-form");
 
   createLocationForm.addEventListener("submit", (e) => createFormHandler(e));
+
+  const sortButton = document.querySelector("#sort-locations");
+  sortButton.addEventListener("click", (e) => sortLocations());
 });
+
+function sortLocations() {
+  document.querySelector("#location-container").innerHTML = "";
+  // fecth GET to get locations
+  fetch(baseURL)
+    .then((response) => response.json())
+    .then((locations) => {
+      // sort by name
+      locations.data.sort(function (a, b) {
+        var nameA = a.attributes.name.toUpperCase(); // ignore upper and lowercase
+        var nameB = b.attributes.name.toUpperCase(); // ignore upper and lowercase
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+
+        // names must be equal
+        return 0;
+      });
+      // console.log(locations.data);
+      locations.data.forEach((location) => {
+        let newLocation = new Location(location, location.attributes);
+        document.querySelector(
+          "#location-container"
+        ).innerHTML += newLocation.renderLocationCard();
+      });
+    });
+}
 
 function getLocations() {
   // GET request
