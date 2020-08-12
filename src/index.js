@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const sortButton = document.querySelector("#sort-locations");
   sortButton.addEventListener("click", (e) => sortLocations());
+
+  // Added deleteButton event listener
+  const deleteButton = document.querySelector(".delete");
+  deleteButton.addEventListener("click", (e) => deleteLocation());
 });
 
 function sortLocations() {
@@ -90,5 +94,21 @@ function postFetch(name, description, image_url, destination_id) {
         "#location-container"
       ).innerHTML += newLocation.renderLocationCard();
       document.querySelector("#create-location-form").reset();
+    });
+}
+
+// Added deleteLocation() function
+function deleteLocation() {
+  let locationDiv = document.getElementsByClassName(".card");
+  let locationDataId = locationDiv.attributes("data-id");
+  fetch(`http://localhost:3000/api/v1/locations/${locationDataId}`, {
+    method: "DELETE",
+  })
+    .then((response) => response.json())
+    .then((json) => {
+      let selectedLocation = document.querySelector(
+        `.card[data-id="${locationDataId}"]`
+      );
+      selectedLocation.remove();
     });
 }
