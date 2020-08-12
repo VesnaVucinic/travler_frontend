@@ -3,6 +3,7 @@ const baseURL = "http://localhost:3000/api/v1/locations";
 document.addEventListener("DOMContentLoaded", () => {
   // gets all the loactions once the domcontent is loaded.
   getLocations();
+  // deleteButton.addEventListener("click", (e) => deleteLocation());
 
   const createLocationForm = document.querySelector("#create-location-form");
 
@@ -99,8 +100,9 @@ function postFetch(name, description, image_url, destination_id) {
 
 // Added deleteLocation() function
 function deleteLocation() {
-  let locationDiv = document.getElementsByClassName(".card");
-  let locationDataId = locationDiv.attributes("data-id");
+  let locationDiv = document.getElementsByClassName("card");
+  // let locationDataId = locationDiv.attribute("data-id");
+  let locationDataId = locationDiv.dataset.id("data-id");
   fetch(`http://localhost:3000/api/v1/locations/${locationDataId}`, {
     method: "DELETE",
   })

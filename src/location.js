@@ -16,7 +16,7 @@ class Location {
                   <p>${this.description}</p>
                   <img src="${this.image_url}" height="400" width="500">
                   <br>
-                  <button type="submit" data-id="${this.id}" class="delete">Delete</button>
+                  <button type="submit" onClick="deleteLocation();" data-id="${this.id}" class="delete">Delete</button>
               </div>
               <br>
               <br>
