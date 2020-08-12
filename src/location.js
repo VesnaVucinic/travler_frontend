@@ -16,11 +16,16 @@ class Location {
                   <p>${this.description}</p>
                   <img src="${this.image_url}" height="400" width="500">
                   <br>
+                  <button type="submit" data-id="${this.id}" class="delete">Delete</button>
               </div>
               <br>
               <br>
             `;
   }
+
+  // static findById(id) {
+  //   return this.all.find((location) => location.id === id);
+  // }
 }
 
 Location.all = [];
