@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Added deleteButton event listener
   const deleteButton = document.querySelector(".delete");
-  deleteButton.addEventListener("click", (e) => deleteLocation(e));
+  deleteButton.addEventListener("click", (e) => deleteLocation());
 });
 
 function sortLocations() {
@@ -99,11 +99,11 @@ function postFetch(name, description, image_url, destination_id) {
 }
 
 // Added deleteLocation() function
-function deleteLocation(e) {
+function deleteLocation() {
   // let locationDiv = document.getElementsByClassName("card");
-  // let locationDataId = locationDiv.attribute("data-id");
-  // let locationDataId = locationDiv[0].dataset.id("data-id");
-  let locationDataId = e.target["data-id"];
+  // let locationDiv = e.target;
+  // let locationDataId = locationDiv[0].dataset.id;
+  let locationDataId = event.target.dataset.id;
   fetch(`http://localhost:3000/api/v1/locations/${locationDataId}`, {
     method: "DELETE",
   })
